@@ -34,7 +34,10 @@
     border: none;
     cursor: pointer;
 }
-
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 /* header styles */
 
@@ -77,6 +80,15 @@
 }
 .banner-image{
     width: 100%;
+}
+/* teams and feature related styles */
+.teams{
+    align-items: center;
+}
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 }
 
 /* responsive media queries */
