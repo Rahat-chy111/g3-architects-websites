@@ -110,6 +110,9 @@ main>section{
     font-weight: 500;
 }
 /* some fact cards related styles */
+.some-facts{
+    text-align: center;
+}
 .facts-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -139,6 +142,20 @@ main>section{
 .fact-description{
     max-width: 540px;
 }
+/* sponsors relates styles */
+.sponsors-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
 
 /* responsive media queries */
 @media (max-width: 576px) {
@@ -146,8 +163,17 @@ main>section{
         flex-direction: column;
         align-items: center;
     }
-    .team-img-container{
-        grid-template-columns: repeat(1, 1fr);
+    .team-img-container,
+    .facts-container,
+    .sponsor-companies{
+        grid-template-columns: 1fr;
+    }
+    .facts-container,.sponsor-companies{
+        justify-items: center;
+        gap: 24px;
+    }
+    .sponsor-companies{
+        gap: 50px;
     }
     .our-features{
         margin-left: 0;
@@ -179,6 +205,11 @@ main>section{
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
+    .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        justify-items: center;
+    }
     .our-features{
         margin-left: 0;
         text-align: center;
@@ -189,6 +220,13 @@ main>section{
     .banner-content{
         padding: 0 20px;
     }
+    .sponsor-companies{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+
+
     /* --- Teams layout: prevent overflow & make images fluid --- */
 .teams {
   gap: 48px;            /* spacing between grid and text column */
